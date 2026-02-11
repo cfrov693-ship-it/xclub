@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>X Club 🔞</title>
+
+<style>
+body{
+  margin:0;
+  background:#0b0b0b;
+  font-family:Arial, sans-serif;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+}
+
+.card{
+  width:95%;
+  max-width:420px;
+  background:#151515;
+  border:1px solid #2a2a2a;
+  border-radius:16px;
+  padding:30px 20px;
+  text-align:center;
+}
+
+.logo{
+  font-size:28px;
+  font-weight:900;
+  margin-bottom:20px;
+  letter-spacing:1px;
+}
+
+.logo span{
+  color:#e11d2e;
+}
+
+input{
+  width:100%;
+  padding:14px;
+  border-radius:12px;
+  border:1px solid #333;
+  background:#0f0f0f;
+  color:#fff;
+  font-size:16px;
+  outline:none;
+}
+
+button{
+  margin-top:16px;
+  width:100%;
+  padding:14px;
+  border-radius:12px;
+  border:0;
+  background:#e11d2e;
+  color:#fff;
+  font-weight:800;
+  font-size:16px;
+  cursor:pointer;
+}
+
+button:active{
+  opacity:0.8;
+}
+
+.err{
+  margin-top:12px;
+  color:#ff5b5b;
+  display:none;
+  font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <div class="logo">X Club <span>🔞</span></div>
+
+  <input id="pw" type="password" placeholder="Parol daxil et">
+  <button onclick="check()">Daxil ol</button>
+
+  <div id="err" class="err">Parol səhvdir</div>
+</div>
+
+<script>
+const PASSWORD = "1234"; // istəsən dəyişə bilərsən
+
+function check(){
+  const value = document.getElementById("pw").value;
+  document.getElementById("err").style.display = "none";
+
+  if(value === PASSWORD){
+    sessionStorage.setItem("auth","1");
+    window.location.href = "watch.html";
+  }else{
+    document.getElementById("err").style.display = "block";
+  }
+}
+
+document.getElementById("pw").addEventListener("keydown", function(e){
+  if(e.key === "Enter"){
+    check();
+  }
+});
+</script>
+
+</body>
+</html>
