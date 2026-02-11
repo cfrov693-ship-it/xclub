@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>X Club</title>
+
+<style>
+body{margin:0;background:#0b0f14;color:#fff;font-family:Arial}
+.top{display:flex;justify-content:space-between;padding:15px;background:#111}
+.panel{background:#111;padding:8px 15px;border-radius:8px}
+.wrap{max-width:700px;margin:auto;padding:20px}
+input{width:100%;padding:12px;border-radius:8px;border:none}
+button{margin-top:10px;width:100%;padding:12px;border:none;border-radius:8px;background:red;color:#fff;font-weight:bold}
+.video{display:none;margin-top:15px}
+video{width:100%;border-radius:12px}
+</style>
+</head>
+
+<body>
+
+<div class="top">
+<div>X Club</div>
+<div class="panel">Secure Panel</div>
+</div>
+
+<div class="wrap">
+<h2>Parol daxil edin</h2>
+
+<input id="pw" type="password" placeholder="Parol">
+<button onclick="unlock()">Aç</button>
+
+<div class="video" id="videoBox">
+<video controls>
+<source src="VIDEO_LINK_BURA" type="video/mp4">
+</video>
+</div>
+
+</div>
+
+<script>
+function unlock(){
+if(document.getElementById("pw").value=="1234"){
+document.getElementById("videoBox").style.display="block";
+}else{
+alert("Parol səhvdir");
+}
+}
+</script>
+
+</body>
+</html>
