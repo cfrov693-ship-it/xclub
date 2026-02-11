@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>X Club 🔞</title>
+
+<style>
+body{
+  margin:0;
+  background:#0b0b0b;
+  font-family:Arial, sans-serif;
+  color:#fff;
+}
+
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px;
+  background:#111;
+  border-bottom:1px solid #222;
+}
+
+.brand{
+  font-weight:900;
+  font-size:20px;
+}
+
+.buttons{
+  display:flex;
+  gap:8px;
+}
+
+.btn{
+  padding:8px 14px;
+  border-radius:8px;
+  font-weight:700;
+  font-size:14px;
+  text-decoration:none;
+  display:inline-block;
+}
+
+.register{
+  background:#2ecc71;
+  color:#000;
+}
+
+.login{
+  background:#2c2c2c;
+  color:#fff;
+}
+
+.promo{
+  text-align:center;
+  padding:14px;
+  background:#151515;
+}
+
+.promo span{
+  background:#e11d2e;
+  padding:6px 12px;
+  border-radius:6px;
+  font-weight:800;
+  animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+  0%{opacity:1;}
+  50%{opacity:0.5;}
+  100%{opacity:1;}
+}
+
+.video-wrap{
+  padding:14px;
+}
+
+video{
+  width:100%;
+  border-radius:12px;
+  background:#000;
+}
+</style>
+</head>
+
+<body>
+
+<script>
+if(sessionStorage.getItem("auth") !== "1"){
+  window.location.href = "index.html";
+}
+</script>
+
+<div class="header">
+  <div class="brand">X Club 🔞</div>
+
+  <div class="buttons">
+    <a class="btn register" href="https://lkhp.pro/5c00d6" target="_blank">Qeydiyyat</a>
+    <a class="btn login" href="https://lkhp.pro/5c00d6" target="_blank">Giriş</a>
+  </div>
+</div>
+
+<div class="promo">
+  Promo kod: <span>ELTE50</span>
+</div>
+
+<div class="video-wrap
