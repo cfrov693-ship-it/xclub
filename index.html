@@ -40,13 +40,14 @@ video{width:100%;border-radius:12px}
 
 <script>
 function unlock(){
-if(document.getElementById("pw").value=="1234"){
-document.getElementById("videoBox").style.display="block";
-}else{
-alert("Parol səhvdir");
-}
+  var pw = document.getElementById("pw").value;
+
+  if(pw === "1234"){
+    document.getElementById("videoBox").style.display = "block";
+  } else {
+    alert("Parol səhvdir");
+  }
 }
 </script>
-
 </body>
 </html>
