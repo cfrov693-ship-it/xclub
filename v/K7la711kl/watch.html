@@ -1,118 +1,105 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="az">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>X Club 🔞</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>X Club</title>
 
 <style>
 body{
   margin:0;
-  background:#0b0b0b;
+  background:#0b0f14;
   font-family:Arial, sans-serif;
-  color:#fff;
+  color:white;
 }
 
 .header{
   display:flex;
-  justify-content:space-between;
   align-items:center;
-  padding:14px;
+  justify-content:space-between;
+  padding:15px;
   background:#111;
-  border-bottom:1px solid #222;
-
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
 }
 
 .brand{
-  font-weight:900;
-  font-size:20px;
+  font-size:22px;
+  font-weight:bold;
 }
 
 .buttons{
   display:flex;
-  gap:8px;
+  gap:10px;
 }
 
 .btn{
-  padding:8px 14px;
+  padding:10px 16px;
   border-radius:8px;
-  font-weight:700;
-  font-size:14px;
   text-decoration:none;
-  display:inline-block;
+  font-weight:bold;
+  color:white;
 }
 
 .register{
   background:#2ecc71;
-  color:#000;
 }
 
 .login{
-  background:#2c2c2c;
-  color:#fff;
+  background:#333;
 }
 
 .promo{
-  text-align:center;
-  padding:14px;
-  background:#151515;
-}
-
-.promo span{
-  background:#e11d2e;
-  padding:6px 12px;
-  border-radius:6px;
-  font-weight:800;
-  animation:pulse 1.5s infinite;
-}
-
-@keyframes pulse{
-  0%{opacity:1;}
-  50%{opacity:0.5;}
-  100%{opacity:1;}
+  background:#1a1a1a;
+  padding:10px;
+  border-radius:10px;
+  margin:15px;
 }
 
 .video-wrap{
-  padding:14px;
+  padding:15px;
 }
 
 video{
   width:100%;
   border-radius:12px;
-  background:#000;
 }
 </style>
 </head>
 
 <body>
 
-<script>
-if(sessionStorage.getItem("auth") !== "1"){
-  window.location.href = "index.html";
-}
-</script> 
- 
 <div class="header">
   <div class="brand">X Club 🔞</div>
 
   <div class="buttons">
-    <a class="btn register" href="https://1wcmkg.life/?open=register&p=m1l9" target="_blank" rel="noopener noreferrer">Qeydiyyat</a>
-<a class="btn login" href="https://1wcmkg.life/?open=register&p=m1l9" target="_blank" rel="noopener noreferrer">Daxil ol</a>
+    <a class="btn register"
+       href="https://1wcmkg.life/?open=register&p=m1l9"
+       target="_blank"
+       rel="noopener noreferrer">
+       Qeydiyyat
+    </a>
+
+    <a class="btn login"
+       href="https://1wcmkg.life/?open=register&p=m1l9"
+       target="_blank"
+       rel="noopener noreferrer">
+       Daxil ol
+    </a>
+  </div>
 </div>
 
 <div class="promo">
-  Promo kod: <span>ELTE50</span>
+  Promo kod: <span style="background:red;padding:6px 10px;border-radius:6px;">ELTE50</span>
 </div>
 
 <div class="video-wrap">
-  <video controls>
-    <source src="video.mp4" type="video/mp4">
-    Sənin brauzerin videonu dəstəkləmir.
-  </video>
+  <video src="video.mp4" controls></video>
 </div>
 
+<script>
+if(localStorage.getItem("auth") !== "1"){
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
