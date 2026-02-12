@@ -1,53 +1,79 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="az">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>X Club</title>
 
 <style>
-body{margin:0;background:#0b0f14;color:#fff;font-family:Arial}
-.top{display:flex;justify-content:space-between;padding:15px;background:#111}
-.panel{background:#111;padding:8px 15px;border-radius:8px}
-.wrap{max-width:700px;margin:auto;padding:20px}
-input{width:100%;padding:12px;border-radius:8px;border:none}
-button{margin-top:10px;width:100%;padding:12px;border:none;border-radius:8px;background:red;color:#fff;font-weight:bold}
-.video{display:none;margin-top:15px}
-video{width:100%;border-radius:12px}
+body{
+  margin:0;
+  background:#0b0f14;
+  font-family:Arial, sans-serif;
+  color:#fff;
+}
+
+.wrap{
+  max-width:400px;
+  margin:100px auto;
+  padding:20px;
+  background:#111;
+  border-radius:12px;
+}
+
+h2{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+input{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:8px;
+  margin-bottom:15px;
+  font-size:16px;
+}
+
+button{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  font-weight:bold;
+  background:#2ecc71;
+  color:#fff;
+  cursor:pointer;
+}
 </style>
 </head>
 
 <body>
 
-<div class="top">
-<div>X Club</div>
-<div class="panel">Secure Panel</div>
-</div>
-
 <div class="wrap">
-<h2>Parol daxil edin</h2>
+  <h2>X Club 🔞</h2>
 
-<input id="pw" type="password" placeholder="Parol">
-<button onclick="unlock()">Aç</button>
-
-<div class="video" id="videoBox">
-<video controls>
-<source src="VID_20260212_004127_666.mp4" type="video/mp4">
-</video>
-</div>
-
+  <input id="pwd" type="password" placeholder="Parol daxil edin">
+  <button type="button" onclick="checkPassword()">Daxil ol</button>
 </div>
 
 <script>
-function unlock(){
-  var pw = document.getElementById("pw").value;
+const PASS = "1234";  // burda parolu dəyişə bilərsən
 
-  if(pw === "1234"){
-    document.getElementById("videoBox").style.display = "block";
+function checkPassword(){
+  const value = document.getElementById("pwd").value;
+
+  if(value === PASS){
+    localStorage.setItem("auth","1");
+
+    // DÜZGÜN KEÇİD
+    window.location.href = "v/K7la711kl/watch.html?v=" + Date.now();
   } else {
     alert("Parol səhvdir");
   }
 }
 </script>
+
 </body>
 </html>
