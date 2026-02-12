@@ -1,126 +1,130 @@
 <!DOCTYPE html>
 <html lang="az">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>X Club</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>X Club</title>
 
-<style>
-body{
-  margin:0;
-  background:#0b0f14;
-  font-family:Arial, sans-serif;
-  color:white;
-}
+  <style>
+    body{
+      margin:0;
+      background:#0b0f14;
+      font-family: Arial, sans-serif;
+      color:#fff;
+    }
 
-.header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:15px;
-  background:#111;
-}
+    .header{
+      background:#111;
+      padding:12px;
+    }
 
-.brand{
-  font-size:22px;
-  font-weight:bold;
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
+    /* 1-ci sətir: logo + promo */
+    .row-top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+    }
 
-.buttons{
-  display:flex;
-  gap:10px;
-}
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:800;
+      font-size:22px;
+      line-height:1;
+      white-space:nowrap;
+    }
 
-.btn{
-  padding:10px 16px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:bold;
-  color:white;
-  transition:0.2s;
-}
+    .promo{
+      background:#1a1a1a;
+      padding:10px 12px;
+      border-radius:10px;
+      font-size:14px;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      white-space:nowrap;
+    }
 
-.btn:hover{
-  opacity:0.8;
-}
+    .promo span{
+      background:#d10000;
+      padding:6px 10px;
+      border-radius:8px;
+      font-weight:800;
+    }
 
-.register{
-  background:#2ecc71;
-}
+    /* 2-ci sətir: düymələr */
+    .row-buttons{
+      margin-top:12px;
+      display:flex;
+      gap:10px;
+    }
 
-.login{
-  background:#333;
-}
+    .btn{
+      flex:1;
+      text-align:center;
+      padding:12px 14px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:800;
+      color:#fff;
+    }
 
-.promo{
-  background:#1a1a1a;
-  padding:12px 18px;
-  border-radius:10px;
-  font-size:14px;
-}
+    .register{ background:#2ecc71; }
+    .login{ background:#2b2b2b; }
 
-.promo span{
-  background:red;
-  padding:6px 10px;
-  border-radius:6px;
-  font-weight:bold;
-}
+    /* Video */
+    .video-wrap{
+      padding:14px;
+    }
 
-.video-wrap{
-  padding:20px;
-}
-
-video{
-  width:100%;
-  border-radius:12px;
-}
-</style>
+    video{
+      width:100%;
+      border-radius:14px;
+      background:#000;
+      display:block;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="header">
+  <div class="header">
+    <div class="row-top">
+      <div class="brand">X Club 🔞</div>
 
-  <div class="brand">
-    X Club 🔞
+      <div class="promo">
+        Promo kod: <span>ELTE50</span>
+      </div>
+    </div>
+
+    <div class="row-buttons">
+      <a class="btn register"
+         href="https://1wcmkg.life/?open=register&p=m1l9"
+         target="_blank"
+         rel="noopener noreferrer">Qeydiyyat</a>
+
+      <a class="btn login"
+         href="https://1wcmkg.life/?open=register&p=m1l9"
+         target="_blank"
+         rel="noopener noreferrer">Daxil ol</a>
+    </div>
   </div>
 
-  <div class="buttons">
-    <a class="btn register"
-       href="https://1wcmkg.life/?open=register&p=m1l9"
-       target="_blank"
-       rel="noopener noreferrer">
-       Qeydiyyat
-    </a>
-
-    <a class="btn login"
-       href="https://1wcmkg.life/?open=register&p=m1l9"
-       target="_blank"
-       rel="noopener noreferrer">
-       Daxil ol
-    </a>
+  <div class="video-wrap">
+    <video controls playsinline>
+      <source src="video.mp4" type="video/mp4" />
+    </video>
   </div>
 
-  <div class="promo">
-    Promo kod: <span>ELTE50</span>
-  </div>
-
-</div>
-
-<div class="video-wrap">
-  <video controls>
-    <source src="video.mp4" type="video/mp4">
-  </video>
-</div>
-
-<script>
-if(localStorage.getItem("auth") !== "1"){
-  window.location.href = "index.html";
-}
-</script>
+  <script>
+    // Parol yoxdursa geri qaytarsın
+    if (localStorage.getItem("auth") !== "1") {
+      window.location.href = "index.html";
+    }
+  </script>
 
 </body>
 </html>
