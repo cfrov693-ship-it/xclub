@@ -24,6 +24,9 @@ body{
 .brand{
   font-size:22px;
   font-weight:bold;
+  display:flex;
+  align-items:center;
+  gap:8px;
 }
 
 .buttons{
@@ -37,6 +40,11 @@ body{
   text-decoration:none;
   font-weight:bold;
   color:white;
+  transition:0.2s;
+}
+
+.btn:hover{
+  opacity:0.8;
 }
 
 .register{
@@ -49,13 +57,20 @@ body{
 
 .promo{
   background:#1a1a1a;
-  padding:10px;
+  padding:12px 18px;
   border-radius:10px;
-  margin:15px;
+  font-size:14px;
+}
+
+.promo span{
+  background:red;
+  padding:6px 10px;
+  border-radius:6px;
+  font-weight:bold;
 }
 
 .video-wrap{
-  padding:15px;
+  padding:20px;
 }
 
 video{
@@ -68,7 +83,10 @@ video{
 <body>
 
 <div class="header">
-  <div class="brand">X Club 🔞</div>
+
+  <div class="brand">
+    X Club 🔞
+  </div>
 
   <div class="buttons">
     <a class="btn register"
@@ -85,14 +103,17 @@ video{
        Daxil ol
     </a>
   </div>
-</div>
 
-<div class="promo">
-  Promo kod: <span style="background:red;padding:6px 10px;border-radius:6px;">ELTE50</span>
+  <div class="promo">
+    Promo kod: <span>ELTE50</span>
+  </div>
+
 </div>
 
 <div class="video-wrap">
-  <video src="video.mp4" controls></video>
+  <video controls>
+    <source src="video.mp4" type="video/mp4">
+  </video>
 </div>
 
 <script>
